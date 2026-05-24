@@ -195,7 +195,15 @@ Cell 10 will prompt for a **GitHub Personal Access Token**. To generate one:
 
 ## 📝 Notes & Observations
 
-> _Add your own notes here as you run experiments — what worked, what didn't, what you want to try next_
+**Tuesday is a problem day** — after running the day-of-week breakdown, Tuesday stands out as the only consistently losing day with a 50% win rate and an average loss of -$166 per trade. Every other day is profitable. This could be related to post-Monday repositioning or macro data releases that commonly fall on Tuesdays. The next step is to filter out Tuesday entries entirely and see how much it improves the overall performance.
+
+**The scale-out structure made the biggest difference** — the original strategy, which used the opening range High/Low for breakout detection, came in at -20.8% return. Once the strategy was rebuilt around close-only signals and a three-stage scale-out (33% at 1× ATR, 33% at 2× ATR, remainder at full TP with the stop moved to breakeven), the return moved to +8.6% on default parameters and +48.3% after optimisation. That single structural change — scaling out rather than exiting all at once — was responsible for the turnaround.
+
+**The strategy held up during the April 2025 NQ crash** — NQ dropped from around 21,000 to 17,000 during this period, which is visible in the equity curve as the sharp dip in the price chart. Because SL and TP distances are based on ATR14, the strategy automatically widened its levels during that high-volatility period rather than getting stopped out repeatedly by the noise. The equity curve dips during this period but recovers, which is an encouraging sign of robustness under stress conditions.
+
+**The optimisation results need to be treated carefully** — the jump from +8.6% to +48.3% after running the parameter grid search looks impressive, but this backtest only covers approximately 2 years of data. With 1,024 parameter combinations tested on a relatively short dataset, there is a real risk that the best parameters are overfitted to this specific period rather than representing a genuine edge. The plan is to forward test the optimised parameters on live data going forward to validate whether the edge holds.
+
+**Next steps** — skip Tuesday trades and re-run to measure the impact, test the same strategy logic on ES (S&P 500 Futures) to see if the edge generalises beyond NQ, and explore sourcing longer historical data through a paid provider to run the backtest over a larger sample size and reduce the overfitting risk.
 
 ---
 
