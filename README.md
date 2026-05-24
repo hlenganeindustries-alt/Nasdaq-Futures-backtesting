@@ -47,19 +47,19 @@ ATR (Average True Range) measures how much NQ typically moves per day. ATR14 = a
 
 > _Paste your baseline stats output here from Cell 5_
 
-```
+
 <img width="337" height="752" alt="Screenshot (215)" src="https://github.com/user-attachments/assets/942a41e5-d19f-4efa-8c1b-291c123dff9e" />
 
-```
+
 
 ### After Optimisation
 
 > _Paste your best-params stats output here from Cell 7_
 
-```
+
 <img width="450" height="500" alt="Screenshot (216)" src="https://github.com/user-attachments/assets/485ffdde-2c77-4e1c-a00e-b64d591c1e51" />
 
-```
+
 
 ### Equity Curve
 
