@@ -4,6 +4,8 @@ A Python-based backtesting framework for an **Opening Range Breakout (ORB)** str
 
 > ⚠️ **Data limitation:** Results are based on ~2 years of hourly data (2024–2026). This is the maximum available through the yfinance API for 1H intervals. Longer-term conclusions should be treated with caution.
 
+Disclaimer (I have not tested this strategy with live funds , these results were simulated using python ,and yahoo finance 1hour price data)
+--- This strategy is still a work in progress , I am still testing for the best possible entry criteria . This is just the logic behind the system
 ---
 
 ## 🧠 Strategy Overview
